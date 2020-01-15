@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+    <script src="p5.min.js"></script>
+  </head>
+  <body>
+    
+    <script>
+      var bImage;
+      var w = window.innerWidth;
+      var h = window.innerHeight;
+      function setup() {
+        //creates canvas X and Y
+        createCanvas(w, h, WEBGL);
+        bImage = loadImage('snow.jpg');
+      }
+
+      function draw() {
+        clear();
+        background(bImage);
+        //rotate around the Y axis when I move my mouse horizontally
+        //divide by 100 to decrease mouse sensitivity
+        rotateY(mouseX/100);
+        //rotate around the X axis when I move my mouse vertically
+        //divide by 100 to decrease mouse sensitivity
+        rotateX(mouseY/100);
+        rect(300,200,100,100);
+        fill("blue");
+        rect(150,150,100,100);
+        fill("red");
+        rect(30,50,100,100);
+        fill("green");
+        noStroke();
+      }
+    </script>
+  </body>
+</html>

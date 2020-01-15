@@ -13,10 +13,12 @@
       var bImage;
       var w = window.innerWidth;
       var h = window.innerHeight;
+      function preload() {
+        bImage = loadImage('snow.jpg');
+      }
       function setup() {
         //creates canvas X and Y
         createCanvas(w, h, WEBGL);
-        bImage = loadImage('snow.jpg');
       }
 
       function draw() {
